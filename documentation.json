@@ -1,0 +1,38 @@
+{
+    "user" : [
+        {
+            "endpoint" : "/api/user/register",
+            "action" : "POST"
+        },
+        {
+            "endpoint" : "/api/user/login",
+            "action" : "POST"
+        },
+        {
+            "endpoint" : "/api/user/logout",
+            "action" : "POST"
+        }
+    ],
+
+    "computers" :  [
+        {
+
+        },
+        {
+            "endpoint" : "/api/computers",
+            "action" : "GET"           
+        }
+    ],
+    "specs" : [
+        {
+            "endpoint" : "/api/specs",
+            "action" : "GET"
+        }
+    ],
+    "components" : [
+        {
+            "endpoint" : "/api/components",
+            "action" : "GET"
+        }
+    ]    
+}
