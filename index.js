@@ -5,8 +5,9 @@ const UserRoutes = require('./src/api/user/user.routes')
 const ComponentsRoutes = require('./src/api/components/components.routes')
 const SpecsRoutes = require('./src/api/specs/specs.routes')
 const ComputersRoutes = require('./src/api/computers/computers.routes')
-const documentation = require('./documentation.json')
+const documentation = require('./src/utils/documentation/documentation.json')
 const { setError } = require('./src/utils/error/error')
+
 
 const { connectDb } = require('./src/utils/database/db')
 
@@ -48,6 +49,7 @@ app.use('/api/specs', SpecsRoutes)
 app.use('/', (req, res, next) => {
     return res.json(documentation)
 })
+
 
 app.use('*', (req, res, next) => {
     return next(setError(404, 'Route not found'))

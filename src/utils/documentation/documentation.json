@@ -1,4 +1,4 @@
-{
+{     
     "user" : [
         {
             "endpoint" : "/api/user/register",
@@ -16,22 +16,48 @@
 
     "computers" :  [
         {
-
+            "endpoint" : "/api/computers",
+            "action" : "GET"
         },
         {
             "endpoint" : "/api/computers",
+            "action" : "POS",
+            "authorization": true          
+        },
+        {
+            "endpoint" : "/api/computers/:id",
             "action" : "GET"           
-        }
+        }      
+
     ],
     "specs" : [
         {
             "endpoint" : "/api/specs",
             "action" : "GET"
+        },
+        {
+            "endpoint" : "/api/specs",
+            "action" : "POST",
+            "authorization" : true
+        },
+        {
+            "endpoint" : "/api/specs/:id",
+            "action" : "GET"   
         }
+
     ],
     "components" : [
         {
             "endpoint" : "/api/components",
+            "action" : "GET"
+        },
+        {
+            "endpoint" : "/api/components",
+            "action" : "POS",
+            "authorization" : true
+        },
+        {
+            "endpoint" : "/api/components/:id",
             "action" : "GET"
         }
     ]    
